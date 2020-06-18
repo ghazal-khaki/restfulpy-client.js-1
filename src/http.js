@@ -41,6 +41,7 @@ export default function doHttpRequest (url, options, responseFactory) {
       } else {
         if (response.status === 200) {
           if (defaultOptions.onResponse) {
+            console.log(response.status, 'Im here in onResponse')
             defaultOptions.onResponse(response)
           }
           if (defaultOptions.postProcessor) {
